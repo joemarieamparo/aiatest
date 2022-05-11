@@ -1,9 +1,12 @@
+import { Liker } from "./Liker"
 import { Profile } from "./Profile"
 
 export interface Article {
+    id: number
     title: string,
     description: string
-    likers: Profile[]
+    likers: Liker[]
     date: string
-    thumbnail: any
+    thumbnail: any,
+    author?: string
 }

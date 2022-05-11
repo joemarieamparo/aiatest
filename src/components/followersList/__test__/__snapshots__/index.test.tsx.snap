@@ -29,6 +29,7 @@ exports[`Screen: FollowersList FollowersList: renders correctly 1`] = `
           "avatar": Object {
             "testUri": "../../../src/assets/images/mary_jean.jpeg",
           },
+          "id": 2,
           "isCurrentUser": undefined,
           "name": "Mary Jean",
           "title": "I am another user of the application",
@@ -37,6 +38,7 @@ exports[`Screen: FollowersList FollowersList: renders correctly 1`] = `
           "avatar": Object {
             "testUri": "../../../src/assets/images/mary_ann.jpeg",
           },
+          "id": 3,
           "isCurrentUser": undefined,
           "name": "Mary Ann",
           "title": "I am another user of the application",

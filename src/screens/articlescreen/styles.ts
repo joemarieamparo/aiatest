@@ -10,8 +10,10 @@ import {
     container: ViewStyle
     title: TextStyle
     subTitle: TextStyle
+    likes: TextStyle
     description: TextStyle
     image: ImageStyle
+    likeIconContainer: ViewStyle
   }
   
   const styles = StyleSheet.create<Styles>({
@@ -30,12 +32,20 @@ import {
       fontSize: R.fonts.size.size_10,
       marginVertical: R.dimens.margin.margin_8
     },
+    likes: {
+      fontSize: R.fonts.size.size_10,
+      marginVertical: R.dimens.margin.margin_8,
+      top: R.dimens.margin.margin_3
+    },
     description: {
       fontSize: R.fonts.size.size_15,
       marginVertical: R.dimens.margin.margin_8
     },
     image: {
       width: '100%'
+    },
+    likeIconContainer: {
+      marginHorizontal: R.dimens.margin.margin_20
     }
   })
   export default styles

@@ -28,13 +28,19 @@ class LandingScreen extends Component<Props, State> {
   
     onItemClick = (profile: Profile) => {
         const {navigation} = this.props
-        const userProfile = getMockProfile(profile.name)
-        navigation.navigate('ProfileScreen', {userProfile})
+        const {userProfile} = this.state
+        const profileData = getMockProfile(profile.name)
+        navigation.navigate('ProfileScreen', {userProfile: profileData, currentUser: userProfile})
     }
 
     onPressArticles = (articles: Article[]) => {
         const {navigation} = this.props
-        navigation.navigate('ArticlesScreen', {isCurrentUser: true, articles})
+        const {userProfile} = this.state
+        navigation.navigate('ArticlesScreen', {
+            isCurrentUser: true, 
+            articles, 
+            currentUser: userProfile
+        })
     }
 
     render() {

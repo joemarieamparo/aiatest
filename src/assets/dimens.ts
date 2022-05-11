@@ -1,6 +1,7 @@
 
 const dimens = {
     margin: {
+        margin_3: 3,
         margin_8: 8,
         margin_10: 10,
         margin_20: 20,

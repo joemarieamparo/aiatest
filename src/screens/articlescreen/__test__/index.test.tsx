@@ -11,11 +11,20 @@ const createTestProps = (propsData: Object) => ({
       state: jest.fn(),
       goBack
     },
-    route: {params: {article: getMockProfile('John Doe').articles[0]}},
+    route: {
+      params: {
+        article: getMockProfile('John Doe').articles[0],
+        likes: 1,
+        isLiked: false,
+        currentUser: getMockProfile('John Doe')
+      }
+    },
     ...propsData
   })
-describe('Screen: ArticlesScreen', () => {
-    it('ArticlesScreen: renders correctly', () => {
+  jest.mock('react-native-vector-icons/FontAwesome', () => 'Icon')
+
+describe('Screen: ArticleScreen', () => {
+    it('ArticleScreen: renders correctly', async () => {
         const props: any = createTestProps({})
         const {toJSON} = render(<ArticleScreen {...props} />)
         expect(toJSON()).toMatchSnapshot();

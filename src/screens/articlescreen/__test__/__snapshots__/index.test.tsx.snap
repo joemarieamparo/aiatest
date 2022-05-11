@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Screen: ArticlesScreen ArticlesScreen: renders correctly 1`] = `
+exports[`Screen: ArticleScreen ArticleScreen: renders correctly 1`] = `
 <RCTScrollView
   style={
     Object {
@@ -49,18 +49,55 @@ exports[`Screen: ArticlesScreen ArticlesScreen: renders correctly 1`] = `
     >
       May 5, 2022
     </Text>
-    <Text
-      allowFontScaling={false}
+    <View
       style={
         Object {
-          "fontSize": 10,
-          "marginVertical": 8,
+          "alignContent": "center",
+          "alignItems": "center",
+          "flexDirection": "row",
         }
       }
-      testID="text_text_id"
     >
-      [object Object] likes
-    </Text>
+      <Text
+        allowFontScaling={false}
+        style={
+          Object {
+            "fontSize": 10,
+            "marginVertical": 8,
+            "top": 3,
+          }
+        }
+        testID="text_text_id"
+      >
+        1 likes
+      </Text>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "marginHorizontal": 20,
+            "opacity": 1,
+          }
+        }
+      >
+        <View>
+          <Icon
+            color="black"
+            name="thumbs-up"
+            size={35}
+          />
+        </View>
+      </View>
+    </View>
     <Text
       allowFontScaling={false}
       style={

@@ -3,6 +3,9 @@ import { SafeAreaView, View } from 'react-native'
 import { NavigationParams, NavigationScreenProp, NavigationState } from 'react-navigation'
 import ArticlesListComponent from '../../components/articlesList'
 import { Article } from '../app/data/model/Article'
+import { Liker } from '../app/data/model/Liker'
+import { UserProfile } from '../app/data/model/UserProfile'
+import { getDataObject } from '../utils/StorageHelper'
 import styles from './styles'
 
 interface Props {
@@ -11,21 +14,31 @@ interface Props {
 
 type State = {
     articles: Article[]
+    currentUser: UserProfile
 }
 
 class ArticlesScreen extends Component<Props, State> {
     constructor(props: Props) {
         super(props)
-        const {articles} = this.props.route.params
+        const {articles, currentUser} = this.props.route.params
         this.state = {
-            articles
+            articles,
+            currentUser
         }
     }
 
-    onItemClick = (article: Article) => {
+    onItemClick = async (article: Article) => {
         const {navigation} = this.props
+        const {currentUser} = this.state
+        const currentLikers = await getDataObject('likes') as Liker[]
+        const filteredLikers = currentLikers.filter(item => item.articleId === article.id)
+        const newArticle = {
+            ...article,
+            likers: [...article.likers, ...filteredLikers]
+        }
         navigation.navigate('ArticleScreen', {
-            article: article
+            article: newArticle,
+            currentUser
         })
     }
 

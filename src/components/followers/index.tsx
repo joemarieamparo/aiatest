@@ -1,5 +1,5 @@
 import React from 'react'
-import { TouchableOpacity, View } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import R from '../../assets'
 import Avatar from '../../components/avatar'
 import { Profile } from '../../screens/app/data/model/Profile'

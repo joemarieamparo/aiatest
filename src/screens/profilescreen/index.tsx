@@ -17,15 +17,17 @@ interface Props {
 
 type State = {
     userProfile: UserProfile
+    currentUser: UserProfile
 }
 
 class ProfileScreen extends React.Component<Props, State> {
 
     constructor(props: Props) {
         super(props)
-        const {userProfile} = this.props.route.params
+        const {userProfile, currentUser} = this.props.route.params
         this.state = {
-            userProfile
+            userProfile,
+            currentUser
         }
       }
 
@@ -38,7 +40,12 @@ class ProfileScreen extends React.Component<Props, State> {
 
     onPressArticles = (articles: Article[]) => {
         const {navigation} = this.props
-        navigation.navigate('ArticlesScreen', {isCurrentUser: false, articles})
+        const {currentUser} = this.state
+        navigation.navigate('ArticlesScreen', {
+            isCurrentUser: false, 
+            articles,
+            currentUser
+        })
     }
 
     render() {
