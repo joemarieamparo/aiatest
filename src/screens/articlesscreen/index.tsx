@@ -15,21 +15,23 @@ interface Props {
 type State = {
     articles: Article[]
     currentUser: UserProfile
+    isCurrentUser: boolean
 }
 
 class ArticlesScreen extends Component<Props, State> {
     constructor(props: Props) {
         super(props)
-        const {articles, currentUser} = this.props.route.params
+        const {articles, currentUser, isCurrentUser} = this.props.route.params
         this.state = {
             articles,
-            currentUser
+            currentUser,
+            isCurrentUser
         }
     }
 
     onItemClick = async (article: Article) => {
         const {navigation} = this.props
-        const {currentUser} = this.state
+        const {currentUser, isCurrentUser} = this.state
         const currentLikers = await getDataObject('likes') as Liker[]
         const filteredLikers = currentLikers.filter(item => item.articleId === article.id)
         const newArticle = {
@@ -38,7 +40,8 @@ class ArticlesScreen extends Component<Props, State> {
         }
         navigation.navigate('ArticleScreen', {
             article: newArticle,
-            currentUser
+            currentUser,
+            isCurrentUser
         })
     }
 

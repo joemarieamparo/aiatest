@@ -18,23 +18,27 @@ type State = {
     likes: number
     isLiked: boolean
     currentUser: UserProfile
+    isCurrentUser: boolean
 }
 
 class ArticleScreen extends Component<Props, State> {
     
     constructor (props: Props) {
         super(props)
-        const {article, currentUser} = this.props.route.params
+        const {article, currentUser, isCurrentUser} = this.props.route.params
         this.state = {
             article,
             likes: article.likers.length,
             isLiked: this.isLiked(article.likers, currentUser),
-            currentUser
+            currentUser,
+            isCurrentUser
         }
     }
 
     onPressLike = async () => {
-        const {isLiked, currentUser, article} =this.state
+        const {isLiked, currentUser, article, isCurrentUser} =this.state
+        if (isCurrentUser) return
+        
         let currentLikers = await getDataObject('likes') as Liker[]
         if (!isLiked) {
             currentLikers.push({id: currentUser.profile.id, articleId: article.id})
