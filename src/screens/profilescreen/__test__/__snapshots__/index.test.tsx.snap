@@ -12,6 +12,221 @@ exports[`Screen: ProfileScreen ProfileScreen: renders correctly 1`] = `
   }
 >
   <View
+    style={
+      Object {
+        "alignContent": "center",
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/assets/images/john_doe.jpeg",
+        }
+      }
+      style={Object {}}
+    />
+    <Text
+      allowFontScaling={false}
+      style={
+        Object {
+          "fontSize": 30,
+          "fontWeight": "bold",
+          "marginVertical": 8,
+        }
+      }
+      testID="text_name"
+    >
+      John Doe
+    </Text>
+    <Text
+      allowFontScaling={false}
+      style={
+        Object {
+          "alignSelf": "center",
+          "fontSize": 15,
+          "fontWeight": "bold",
+          "margin": 8,
+        }
+      }
+      testID="text_title"
+    >
+      I am the user of the application
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "paddingTop": 20,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Object {
+          "fontSize": 15,
+          "fontWeight": "bold",
+          "margin": 8,
+        }
+      }
+      testID="text_text_id"
+    >
+      Followers (2)
+    </Text>
+    <RCTScrollView
+      data={
+        Array [
+          Object {
+            "avatar": Object {
+              "testUri": "../../../src/assets/images/mary_jean.jpeg",
+            },
+            "id": 2,
+            "isCurrentUser": undefined,
+            "name": "Mary Jean",
+            "title": "I am another user of the application",
+          },
+          Object {
+            "avatar": Object {
+              "testUri": "../../../src/assets/images/mary_ann.jpeg",
+            },
+            "id": 3,
+            "isCurrentUser": undefined,
+            "name": "Mary Ann",
+            "title": "I am another user of the application",
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      viewabilityConfigCallbackPairs={Array []}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "opacity": 1,
+                "padding": 10,
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/mary_jean.jpeg",
+                }
+              }
+              style={
+                Object {
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            />
+            <Text
+              allowFontScaling={false}
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "fontSize": 15,
+                  "fontWeight": "bold",
+                  "margin": 8,
+                }
+              }
+              testID="text_text_id"
+            >
+              Mary Jean 
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "opacity": 1,
+                "padding": 10,
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/mary_ann.jpeg",
+                }
+              }
+              style={
+                Object {
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            />
+            <Text
+              allowFontScaling={false}
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "fontSize": 15,
+                  "fontWeight": "bold",
+                  "margin": 8,
+                }
+              }
+              testID="text_text_id"
+            >
+              Mary Ann 
+            </Text>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+  <View
     accessible={true}
     collapsable={false}
     focusable={true}

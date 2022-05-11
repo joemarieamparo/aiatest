@@ -53,8 +53,8 @@ class ProfileScreen extends React.Component<Props, State> {
         const followersLabel = R.strings.profileScreen.followers.replace('**data**', `${userProfile.followers.length}`)
         return (
             <SafeAreaView style={styles.container}>
-                {/* <ProfileComponent userProfile={userProfile} onItemClick={this.onItemClick} onPressArticles={this.onPressArticles}/> */}
-                {/* <FollowersListComponent users={userProfile.followers} header={followersLabel} onItemClick={this.onItemClick} /> */}
+                <ProfileComponent userProfile={userProfile} onItemClick={this.onItemClick} onPressArticles={this.onPressArticles}/>
+                <FollowersListComponent users={userProfile.followers} header={followersLabel} onItemClick={this.onItemClick} />
                 <TouchableOpacity onPress={() => this.onPressArticles(userProfile.articles)} style={styles.bottomView} >
                     <TextComponent testId='articles' text={R.strings.profileScreen.seeArticles} />
                 </TouchableOpacity>
