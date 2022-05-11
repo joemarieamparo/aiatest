@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screen: Text Text: renders correctly 1`] = `
+<Text
+  allowFontScaling={false}
+  style={Object {}}
+  testID="text_id"
+>
+  Text
+</Text>
+`;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screen: ArticleItemComponent ArticleItemComponent: renders correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "opacity": 1,
+      "padding": 10,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Object {
+        "alignSelf": "center",
+        "fontSize": 15,
+        "fontWeight": "bold",
+        "margin": 8,
+      }
+    }
+    testID="text_text_id"
+  >
+    Article #1 (1 likes)
+  </Text>
+</View>
+`;

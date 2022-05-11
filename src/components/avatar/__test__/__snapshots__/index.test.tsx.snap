@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screen: Avatar Avatar: renders correctly 1`] = `
+<Image
+  source="image"
+  style={Object {}}
+/>
+`;

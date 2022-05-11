@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screen: Followers Followers: renders correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "opacity": 1,
+      "padding": 10,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/assets/images/john_doe.jpeg",
+      }
+    }
+    style={
+      Object {
+        "height": 50,
+        "width": 50,
+      }
+    }
+  />
+  <Text
+    allowFontScaling={false}
+    style={
+      Object {
+        "alignSelf": "center",
+        "fontSize": 15,
+        "fontWeight": "bold",
+        "margin": 8,
+      }
+    }
+    testID="text_text_id"
+  >
+    John Doe (You)
+  </Text>
+</View>
+`;

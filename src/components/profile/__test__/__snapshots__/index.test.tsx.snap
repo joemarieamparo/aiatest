@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Screen: Profile Profile: renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignContent": "center",
+      "alignItems": "center",
+      "justifyContent": "center",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/assets/images/john_doe.jpeg",
+      }
+    }
+    style={Object {}}
+  />
+  <Text
+    allowFontScaling={false}
+    style={
+      Object {
+        "fontSize": 30,
+        "fontWeight": "bold",
+        "marginVertical": 8,
+      }
+    }
+    testID="text_name"
+  >
+    John Doe
+  </Text>
+  <Text
+    allowFontScaling={false}
+    style={
+      Object {
+        "alignSelf": "center",
+        "fontSize": 15,
+        "fontWeight": "bold",
+        "margin": 8,
+      }
+    }
+    testID="text_title"
+  >
+    I am the user of the application
+  </Text>
+</View>
+`;
